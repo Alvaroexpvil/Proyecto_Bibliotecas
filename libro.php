@@ -1,5 +1,4 @@
 <?php
-
     class libro{
         public $isbn;
         public $titulo;
@@ -48,5 +47,4 @@
             $this->fecha_publicacion=$fecha_publicacion;
         }
     }
-
 ?>
