@@ -2,7 +2,7 @@
     session_start();
     require_once "libro.php";
     if($_POST){
-        $isbn=$_POST['isbn'];
+       /* $isbn=$_POST['isbn'];
         $titulo=$_POST['titulo'];
         $autor=$_POST['autor'];
         $fecha_publicacion=$_POST['fecha_publicacion'];
@@ -10,6 +10,7 @@
         $_SESSION['libros'] = array(new libro($isbn,$titulo,$autor,$fecha_publicacion));
         $libro = $_SESSION['libros'];
         array_push($_SESSION['libros'], $libro);
+        */
     } 
 ?>
 <!DOCTYPE html>
@@ -33,7 +34,7 @@
 
         <tbody>
             <?php
-            $personas = ["Juan","Fran","Antonio","Alba"];
+            /*$personas = ["Juan","Fran","Antonio","Alba"];
             foreach($_SESSION['libros'] as $isbn as $titulo as $autor as $fecha_publicacion){ //libros as .... 
                 echo "<tr>";
                 echo "<td>$isbn</td>";
@@ -43,7 +44,7 @@
                 echo "<td><a href=#>Eliminar</a></td>";
                 echo "<td><a href=modificacionLibro.php>Modificar</a></td>";
                 echo "</tr>";
-            }
+            }*/
             ?>
         </tbody>
     </table>   

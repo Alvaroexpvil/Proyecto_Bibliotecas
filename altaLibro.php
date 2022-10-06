@@ -9,18 +9,25 @@
 <body>
 
     <?php
+    require("libro.php");
+
         if($_POST){
+
             $listaLibros  = $_SESSION['libro'];
+
             $isbn=$_POST['isbn'];
             $titulo=$_POST['titulo'];
             $autor=$_POST['autor'];
             $fecha_publicacion=$_POST['fecha_publicacion'];
+
             $nuevoLibro = new libro($isbn,$titulo,$autor,$fecha_publicacion);
-            array_push($_SESSION['libros'], $libro);
+            array_push($_SESSION['libros'], $listaLibros);
+            $_SESSION['libro'] = $listaLibros;
+        
         }
    ?>
 
-    <form action="listadoLibros.php" method="post">
+    <form action="altaLibro.php" method="post">
         <label>ISBN:</label>
         <input type="text" name="isbn">
     </br>
