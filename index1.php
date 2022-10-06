@@ -1,9 +1,16 @@
 <?php
-    session_start();
     require("libro.php");
-
+    session_start();
     $libros= array();
     $_SESSION['libro']=$libros;
+
+    if(!isset($_SESSION['libro'])){
+        $_SESSION['libro']=$libro;
+    }
+/*
+    $libro = new libro();
+    $libro->set_isbn(1);
+*/
 
 ?>
 
