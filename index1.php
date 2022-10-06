@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    require("libro.php");
+
+    $libros= array();
+    $_SESSION['libro']=$libros;
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -5,14 +13,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Libreria</title>
 </head>
 <body>
-asasa
     <ul>
         <li><a href="listadoLibros.php">Libros</a></li>
         <li><a href="listadoSocios.php">Socios</a></li>
     </ul>
-    
 </body>
 </html>

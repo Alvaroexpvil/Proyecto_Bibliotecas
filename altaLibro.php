@@ -10,11 +10,13 @@
 
     <?php
         if($_POST){
-        $isbn=$_POST['isbn'];
-        $titulo=$_POST['titulo'];
-        $autor=$_POST['autor'];
-        $fecha_publicacion=$_POST['fecha_publicacion'];
-        $nuevoLibro = new libro($isbn,$titulo,$autor,$fecha_publicacion);
+            $listaLibros  = $_SESSION['libro'];
+            $isbn=$_POST['isbn'];
+            $titulo=$_POST['titulo'];
+            $autor=$_POST['autor'];
+            $fecha_publicacion=$_POST['fecha_publicacion'];
+            $nuevoLibro = new libro($isbn,$titulo,$autor,$fecha_publicacion);
+            array_push($_SESSION['libros'], $libro);
         }
    ?>
 
