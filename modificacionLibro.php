@@ -11,12 +11,12 @@
     require 'libro.php';
     session_start(); 
    ?>
-    <form action="modificacionLibro.php" method="post">
+    <form action="modificarLibro.php" method="post">
             <label>ISBN:</label>
-            <input type="text" name="isbn"> 
+            <input type="text" name="isbn" id="isbn"> 
         </br>
             <label>Titulo:</label>
-            <input type="text" name="titulo">
+            <input type="text" name="titulo" id="titulo">
         </br>
             <label>Autor:</label>
             <input type="text" name="autor">
@@ -26,7 +26,7 @@
         </br>
         </br>
             <input type="submit" value="Modificar">
-            <a href="listadoLibros.php">Ver lista de libros</a>
+            
         </form>
 </body>
 </html>

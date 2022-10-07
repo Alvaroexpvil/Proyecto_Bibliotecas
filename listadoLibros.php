@@ -25,14 +25,15 @@
         </tr>
             <?php
             $libros = $_SESSION['libros'];
+
             foreach ($libros as $libro) {
                     echo "<tr>";
-                    echo "<td>".$libro->get_isbn()."</td>";
-                    echo "<td>".$libro->get_titulo()."</td>";
-                    echo "<td>".$libro->get_autor()."</td>";
-                    echo "<td>".$libro->get_fecha_publicacion()."</td>";
-                    echo "<td><a href=\"modificacionLibro.php?dni=$libro->isbn\">Modificar por dni</a></td>";
-                    echo "<td><a href=\"eliminarLibro.php?dni=$libro->isbn\">Eliminar por dni</a></td>";
+                    echo "<td>$libro->isbn</td>";
+                    echo "<td>$libro->titulo</td>";
+                    echo "<td>$libro->autor</td>";
+                    echo "<td>$libro->fecha_publicacion</td>";
+                    echo "<td><a href=\"modificacionLibro.php?isbn=$libro->isbn\">Modificar por isbn</a></td>";
+                    echo "<td><a href=\"eliminarLibro.php?isbn=$libro->isbn\">Eliminar por isbn</a></td>";
                     echo "</tr>";       
             }         
         ?>
