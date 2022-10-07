@@ -15,7 +15,7 @@
     <h1>LIBROS</h1>
     <table border="1">
         <thead><tr><th colspan="6">Listado de Libros</th></tr></thead> 
-        <tbody>
+        <tbody> 
         <tr>
             <th>ISBN</th>
             <th>TITULO</th>
