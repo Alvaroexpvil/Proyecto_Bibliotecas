@@ -5,7 +5,7 @@
             $socio = new Socio($_POST['nombre'],
                                 $_POST['apellidos'],
                                 $_POST['dni'],
-                                $_POST['edad'],
+                                $_POST['telefono'],
                                 $_POST['direccion']);
 
             array_push($_SESSION['socios'],$socio);
@@ -30,8 +30,8 @@
         <label>DNI:</label>
         <input type="text" name="dni">
     </br>
-        <label>EDAD:</label>
-        <input type="text" name="edad">
+        <label>TELEFONO:</label>
+        <input type="text" name="telefono">
     </br>
         <label>DIRECCION:</label>
         <input type="text" name="direccion">
