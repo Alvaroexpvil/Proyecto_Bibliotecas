@@ -35,16 +35,9 @@
                     echo "<td>".$socio->get_dni()."</td>";
                     echo "<td>".$socio->get_telefono()."</td>";
                     echo "<td>".$socio->get_direccion()."</td>";
-                   /* echo
-                    "<form action=modificacionSocio.php method=POST><td>
-                    <input type='submit' value='Modificar'></input></td>
-                    <input type='hidden' value='.$key.'></input>
-                    </form>";
-                    echo
-                    "<form action=eliminaSocio.php method=POST><td>
-                    <input type='submit' value='Eliminar'></input></td>
-                    <input type='hidden' value='.$key.'></input>
-                    </form>";*/
+                    echo "<td><a href=\"modificacionSocio.php?dni=$socio->dni\">Modificar por dni</a></td>";
+                    echo "<td><a href=\"eliminarSocio.php?dni=$socio->dni\">Eliminar por dni</a></td>";
+                    
                     echo "</tr>";       
             }    
                 
