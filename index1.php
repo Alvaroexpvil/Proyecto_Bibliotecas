@@ -1,17 +1,12 @@
 <?php
-    require("libro.php");
     session_start();
-    $libros= array();
-    $_SESSION['libro']=$libros;
+    if(!isset($_SESSION['libros'])){
+        $_SESSION['libros'] = [];
+      }
 
-    if(!isset($_SESSION['libro'])){
-        $_SESSION['libro']=$libro;
-    }
-/*
-    $libro = new libro();
-    $libro->set_isbn(1);
-*/
-
+      if(!isset($_SESSION['socios'])){
+        $_SESSION['socios'] = [];
+      }
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +18,7 @@
     <title>Libreria</title>
 </head>
 <body>
+    <h1>Libreria</h1>
     <ul>
         <li><a href="listadoLibros.php">Libros</a></li>
         <li><a href="listadoSocios.php">Socios</a></li>

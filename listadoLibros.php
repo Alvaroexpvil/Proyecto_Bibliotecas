@@ -1,18 +1,8 @@
 <?php 
+    require 'libro.php';
     session_start();
-    require_once "libro.php";
-    if($_POST){
-       /* $isbn=$_POST['isbn'];
-        $titulo=$_POST['titulo'];
-        $autor=$_POST['autor'];
-        $fecha_publicacion=$_POST['fecha_publicacion'];
-
-        $_SESSION['libros'] = array(new libro($isbn,$titulo,$autor,$fecha_publicacion));
-        $libro = $_SESSION['libros'];
-        array_push($_SESSION['libros'], $libro);
-        */
-    } 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +12,10 @@
     <title>Listado Libros</title>
 </head>
 <body>
+    <h1>LIBROS</h1>
     <table border="1">
         <thead><tr><th colspan="6">Listado de Libros</th></tr></thead> 
+        <tbody>
         <tr>
             <th>ISBN</th>
             <th>TITULO</th>
@@ -31,22 +23,21 @@
             <th>FECHA PUBLICACION</th>
             <th colspan="2"><a href="altaLibro.php">NUEVO LIBRO</a></th>
         </tr>
-
-        <tbody>
             <?php
-            /*$personas = ["Juan","Fran","Antonio","Alba"];
-            foreach($_SESSION['libros'] as $isbn as $titulo as $autor as $fecha_publicacion){ //libros as .... 
-                echo "<tr>";
-                echo "<td>$isbn</td>";
-                echo "<td>$titulo</td>";
-                echo "<td>$autor</td>";
-                echo "<td>$fecha_publicacion</td>";
-                echo "<td><a href=#>Eliminar</a></td>";
-                echo "<td><a href=modificacionLibro.php>Modificar</a></td>";
-                echo "</tr>";
-            }*/
-            ?>
+            $libros = $_SESSION['libros'];
+            foreach ($libros as $key=>$libro) {
+                    echo "<tr>";
+                    echo "<td>".$libro->get_isbn()."</td>";
+                    echo "<td>".$libro->get_titulo()."</td>";
+                    echo "<td>".$libro->get_autor()."</td>";
+                    echo "<td>".$libro->get_fecha_publicacion()."</td>";
+                    echo "<td><a href=#>Eliminar</a></td>";          
+                    echo"<td><a href=modificacionLibro.php>Modificar</a></td>";  
+                    echo "</tr>";       
+            }         
+        ?>
         </tbody>
     </table>   
+    <a href="index1.php">Volver al inicio</a>
 </body>
 </html>

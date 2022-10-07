@@ -1,5 +1,5 @@
 <?php
-    class libro{
+    class Libro{
         public $isbn;
         public $titulo;
         public $autor;
@@ -11,7 +11,7 @@
             $this->autor=$autor;
             $this->fecha_publicacion=$fecha_publicacion;   
         }
-        //isbn
+        
         function get_isbn(){
             return $this->isbn;
         }
@@ -20,7 +20,6 @@
             $this->isbn=$isbn;
         }
 
-        //titulo
         function get_titulo(){
             return $this->titulo;
         }
@@ -29,7 +28,7 @@
             $this->titulo=$titulo;
         }
 
-        //autor
+       
         function get_autor(){
             return $this->autor;
         }
@@ -38,7 +37,6 @@
             $this->autor=$autor;
         }
 
-        //fecha de publicacion
         function get_fecha_publicacion(){
             return $this->fecha_publicacion;
         }

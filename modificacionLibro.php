@@ -8,17 +8,12 @@
 </head>
 <body>
     <?php
-        if($_POST){
-        $isbn=$_POST['isbn'];
-        $titulo=$_POST['titulo'];
-        $autor=$_POST['autor'];
-        $fecha_publicacion=$_POST['fecha_publicacion'];
-        $nuevoLibro = new libro($isbn,$titulo,$autor,$fecha_publicacion);
-        }
+    require 'libro.php';
+    session_start(); 
    ?>
-    <form action="listadoLibros.php" method="post">
+    <form action="modificacionLibro.php" method="post">
             <label>ISBN:</label>
-            <input type="text" name="isbn">
+            <input type="text" name="isbn"> 
         </br>
             <label>Titulo:</label>
             <input type="text" name="titulo">
@@ -30,7 +25,8 @@
             <input type="text" name="fecha_publicacion">
         </br>
         </br>
-            <input type="submit" value="Añadir Libro">
+            <input type="submit" value="Modificar">
+            <a href="listadoLibros.php">Ver lista de libros</a>
         </form>
 </body>
 </html>
