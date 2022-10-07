@@ -21,7 +21,7 @@
             <th>NOMBRE</th>
             <th>APELLIDOS</th>
             <th>DNI</th>
-            <th>EDAD</th>
+            <th>TELEFONO</th>
             <th>DIRECCION</th>
             <th colspan="2"><a href="altaSocio.php">NUEVO SOCIO</a></th>
         </tr>
@@ -35,7 +35,7 @@
                     echo "<td>".$socio->get_dni()."</td>";
                     echo "<td>".$socio->get_telefono()."</td>";
                     echo "<td>".$socio->get_direccion()."</td>";
-                    echo
+                   /* echo
                     "<form action=modificacionSocio.php method=POST><td>
                     <input type='submit' value='Modificar'></input></td>
                     <input type='hidden' value='.$key.'></input>
@@ -44,7 +44,7 @@
                     "<form action=eliminaSocio.php method=POST><td>
                     <input type='submit' value='Eliminar'></input></td>
                     <input type='hidden' value='.$key.'></input>
-                    </form>";
+                    </form>";*/
                     echo "</tr>";       
             }    
                 
