@@ -42,6 +42,6 @@
         ?>
         </tbody>
     </table>   
-    <a href="index1.php">Volver al inicio</a>
+    <a href="index.php">Volver al inicio</a>
 </body>
 </html>
