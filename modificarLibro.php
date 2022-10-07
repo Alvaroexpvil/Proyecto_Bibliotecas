@@ -18,13 +18,7 @@
             break;
         }
     }
-
     $_SESSION['libros'] = $libros; 
 
     header('Location: listadoLibros.php');
-    
-
-
-
-
 ?>

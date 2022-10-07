@@ -10,19 +10,32 @@
     <?php
     require 'libro.php';
     session_start(); 
+
+    $isbn = $_GET['isbn'];
+    $marcador;
+    $libros = $_SESSION['libros'];
+
+    foreach($libros as $libro){
+        if($isbn == $libro->isbn){
+            $marcador = $libro;
+            break;
+        }
+    }
+    //
+    // guardo en la variable marcador el Libro cuyo isbn coincida con el que recibo por get
    ?>
-    <form action="modificarLibro.php" method="post">
+    <form action="modificarLibro.php" method="POST">
             <label>ISBN:</label>
-            <input type="text" name="isbn" id="isbn"> 
+            <input type="text" name="isbn" value="<?php echo $marcador->isbn?>"> 
         </br>
             <label>Titulo:</label>
-            <input type="text" name="titulo" id="titulo">
+            <input type="text" name="titulo" value="<?php echo $marcador->titulo?>">
         </br>
             <label>Autor:</label>
-            <input type="text" name="autor">
+            <input type="text" name="autor" value="<?php echo $marcador->autor?>">
         </br>
             <label>Fecha:</label>
-            <input type="text" name="fecha_publicacion">
+            <input type="text" name="fecha_publicacion" value="<?php echo $marcador->fecha_publicacion?>">
         </br>
         </br>
             <input type="submit" value="Modificar">

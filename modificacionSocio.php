@@ -11,7 +11,23 @@
     <title>Modificar Socio</title>
 </head>
 <body>
-    <form action="modificacionSocio.php" method="POST">
+    <?php
+        require 'socio.php';
+        session_start(); 
+
+        $dni = $_GET['dni'];
+        $marcador;
+        $socios = $_SESSION['socios'];
+
+        foreach($socios as $libro){
+            if($isbdnin == $libro->dni){
+                $marcador = $socio;
+                break;
+            }
+        }
+    ?>
+
+    <form action="modificarSocio.php" method="POST">
         <label>NOMBRE:</label>
         <input type="text" name="nombre">
     </br>
@@ -29,7 +45,6 @@
     </br>
     </br>
             <input type="submit" value="Modificar">
-            <a href="listadoSocios.php">Ver lista de socios</a>
     </form>
 </body>
 </html>
