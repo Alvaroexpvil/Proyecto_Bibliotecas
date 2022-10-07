@@ -31,8 +31,14 @@
                     echo "<td>".$libro->get_titulo()."</td>";
                     echo "<td>".$libro->get_autor()."</td>";
                     echo "<td>".$libro->get_fecha_publicacion()."</td>";
-                    echo "<td><a href=#>Eliminar</a></td>";          
-                    echo"<td><a href=modificacionLibro.php>Modificar</a></td>";  
+                    echo
+                    "<form action=modificacionLibro.php method=POST><td>
+                    <input type='submit' value='Modificar'></input></td>
+                    </form>";
+                    echo
+                    "<form action=eliminaLibro.php method=POST><td>
+                    <input type='submit' value='Eliminar'></input></td>
+                    </form>";
                     echo "</tr>";       
             }         
         ?>

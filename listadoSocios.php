@@ -35,8 +35,14 @@
                     echo "<td>".$socio->get_dni()."</td>";
                     echo "<td>".$socio->get_edad()."</td>";
                     echo "<td>".$socio->get_direccion()."</td>";
-                    echo "<td><a href=#>Eliminar</a></td>";     
-                    echo "<td><a href=modificacionSocio.php>Modificar</a></td>"; 
+                    echo
+                    "<form action=modificacionSocio.php method=POST><td>
+                    <input type='submit' value='Modificar'></input></td>
+                    </form>";
+                    echo
+                    "<form action=eliminaSocio.php method=POST><td>
+                    <input type='submit' value='Eliminar'></input></td>
+                    </form>";
                     echo "</tr>";       
             }    
                 

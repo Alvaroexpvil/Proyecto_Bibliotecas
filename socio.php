@@ -3,14 +3,14 @@
         public $nombre;
         public $apellidos;
         public $dni;
-        public $edad;
+        public $telefono;
         public $direccion;
 
-    public function __construct($nombre, $apellidos, $dni, $edad, $direccion) {
+    public function __construct($nombre, $apellidos, $dni, $telefono, $direccion) {
         $this->nombre = $nombre;
         $this->apellidos = $apellidos;
         $this->dni = $dni;
-        $this->edad = $edad;
+        $this->telefono = $telefono;
         $this->direccion = $direccion;
     }
     
@@ -38,12 +38,12 @@
         $this->dni=$dni;
     }
 
-    function get_edad(){
-        return $this->edad;
+    function get_telefono(){
+        return $this->telefono;
     }
 
-    function set_edad(){
-        $this->edad=$edad;
+    function set_telefono(){
+        $this->telefono=$telefono;
     }
 
     function get_direccion(){
