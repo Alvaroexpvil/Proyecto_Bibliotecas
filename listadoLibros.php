@@ -34,10 +34,12 @@
                     echo
                     "<form action=modificacionLibro.php method=POST><td>
                     <input type='submit' value='Modificar'></input></td>
+                    <input type='hidden' value='.$key.'></input>
                     </form>";
                     echo
                     "<form action=eliminaLibro.php method=POST><td>
                     <input type='submit' value='Eliminar'></input></td>
+                    <input type='hidden' value='.$key.'></input>
                     </form>";
                     echo "</tr>";       
             }         
