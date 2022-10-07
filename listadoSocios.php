@@ -28,12 +28,12 @@
 
             <?php
             $socios = $_SESSION['socios'];
-            foreach ($socios as $key=>$socio) {
+            foreach ($socios as $socio) {
                     echo "<tr>";
                     echo "<td>".$socio->get_nombre()."</td>";
                     echo "<td>".$socio->get_apellidos()."</td>";
                     echo "<td>".$socio->get_dni()."</td>";
-                    echo "<td>".$socio->get_edad()."</td>";
+                    echo "<td>".$socio->get_telefono()."</td>";
                     echo "<td>".$socio->get_direccion()."</td>";
                     echo
                     "<form action=modificacionSocio.php method=POST><td>
