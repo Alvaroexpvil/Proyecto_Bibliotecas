@@ -30,17 +30,15 @@
             $socios = $_SESSION['socios'];
             foreach ($socios as $socio) {
                     echo "<tr>";
-                    echo "<td>".$socio->get_nombre()."</td>";
-                    echo "<td>".$socio->get_apellidos()."</td>";
-                    echo "<td>".$socio->get_dni()."</td>";
-                    echo "<td>".$socio->get_telefono()."</td>";
-                    echo "<td>".$socio->get_direccion()."</td>";
-                    echo "<td><a href=\"modificacionSocio.php?dni=$socio->dni\">Modificar por dni</a></td>";
-                    echo "<td><a href=\"eliminarSocio.php?dni=$socio->dni\">Eliminar por dni</a></td>";
-                    
+                    echo "<td>$socio->nombre</td>";
+                    echo "<td>$socio->apellidos</td>";
+                    echo "<td>$socio->dni</td>";
+                    echo "<td>$socio->telefono</td>";
+                    echo "<td>$socio->direccion</td>";
+                    echo "<td><a href=\"modificacionSocio.php?dni=$socio->dni\">Modificar</a></td>";
+                    echo "<td><a href=\"eliminarSocio.php?dni=$socio->dni\">Eliminar</a></td>";
                     echo "</tr>";       
             }    
-                
         ?>
         </tbody>
     </table>   

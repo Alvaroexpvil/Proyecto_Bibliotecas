@@ -32,8 +32,8 @@
                     echo "<td>$libro->titulo</td>";
                     echo "<td>$libro->autor</td>";
                     echo "<td>$libro->fecha_publicacion</td>";
-                    echo "<td><a href=\"modificacionLibro.php?isbn=$libro->isbn\">Modificar por isbn</a></td>";
-                    echo "<td><a href=\"eliminarLibro.php?isbn=$libro->isbn\">Eliminar por isbn</a></td>";
+                    echo "<td><a href=\"modificacionLibro.php?isbn=$libro->isbn\">Modificar</a></td>";
+                    echo "<td><a href=\"eliminarLibro.php?isbn=$libro->isbn\">Eliminar</a></td>";
                     echo "</tr>";       
             }         
         ?>
